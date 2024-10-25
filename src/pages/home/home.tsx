@@ -4,7 +4,7 @@ import { Banner } from "../../components/pages/home/banner";
 export const Home = () => {
   return (
     <LandingPageLayout>
-      <div className="flex flex-col p-5">
+      <div className="flex flex-col ">
         <Banner />
       </div>
     </LandingPageLayout>

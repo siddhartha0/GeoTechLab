@@ -73,7 +73,7 @@ export const Text = React.memo(
         className={classname(`${className}`, {
           //----------Size & FONT WEIGHT------------//
           //------------- Default or 500px  font with different sizes-----------------//
-          "text-[40px] font-normal": size == "heading-lg-default",
+          "text-[40px] font-normal leading-tight": size == "heading-lg-default",
           "text-[26px] font-normal": size === "heading-base-default",
           "text-[22px] font-normal": size === "body-lg-default",
           "text-[20px] font-normal": size === "body-md-default",
