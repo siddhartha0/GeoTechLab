@@ -1,9 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { Home } from "./pages/home/home";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="text-black-200">hello</div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Home />} path="/"></Route>
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );
