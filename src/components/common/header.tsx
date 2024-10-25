@@ -9,7 +9,7 @@ export const Header = () => {
       <section>
         <img src={logo} alt="" className="w-52 " />
       </section>
-      <section className="flex place-items-center gap-10">
+      <section className="flex place-items-center gap-7">
         {HeaderData.map((header) => (
           <Link to={header.path} key={header.id}>
             <Text
