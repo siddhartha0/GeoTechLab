@@ -5,7 +5,7 @@ import { HeaderData } from "../../utils/constants/HeaderData";
 
 export const Header = () => {
   return (
-    <div className="flex place-items-center justify-between px-3 py-5">
+    <div className="flex place-items-center justify-between px-5 py-5">
       <section>
         <img src={logo} alt="" className="w-52 " />
       </section>
