@@ -18,13 +18,7 @@ export interface ButtonProps
     | "small-xl"
     | "small-lg";
 
-  usage?:
-    | "brand"
-    | "click"
-    | "primary"
-    | "default"
-    | "primary-gradient"
-    | "info";
+  usage?: "brand" | "click" | "primary" | "default";
   outline?: "brand" | "primary" | "none";
   className?: string;
 }
@@ -73,13 +67,10 @@ export const Button = React.memo(
             //--------- End of Padding && Border Radius------------//
 
             //--------- Background Color------------//
-            "bg-black-1000 text-white ": usage === "default",
-            "bg-primary-500 text-primary-1000 ": usage === "primary",
-            "bg-primary-800 text-white ": usage === "info",
-            "bg-dark-blue text-black-100 ": usage === "brand",
-            "bg-white text-primary-700 ": usage === "click",
-            "hover:bg-white bg-gradient-to-r from-fadish-blue to-fade-blue text-white  ":
-              usage === "primary-gradient",
+            "bg-fadish-blue text-white ": usage === "default",
+            "bg-yellow text-white ": usage === "primary",
+            "bg-milky-green text-white ": usage === "brand",
+            "bg-white text-fade-blue ": usage === "click",
             //--------- End of Background Color------------//
 
             //--------- Border------------//
