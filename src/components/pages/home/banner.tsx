@@ -12,7 +12,7 @@ export const Banner = () => {
         <Text size="heading-lg-default">
           Industry leaders in compaction control and material compliance testing
         </Text>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 w-[65%]">
           <Text usage="info" size="body-base-mid">
             Delivering an unparalleled level of customer service and technical
             integrity.
