@@ -11,6 +11,7 @@ module.exports = {
       "dark-blue": "#0F82FF",
       "fadish-blue": "#1B9AF7",
       "fade-blue": "#299FE2",
+      "fadding-blue": "#79CAFF",
 
       yellow: "#FEAE1B",
       "milky-green": "#01CD61",
