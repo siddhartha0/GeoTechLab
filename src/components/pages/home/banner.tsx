@@ -18,8 +18,10 @@ export const Banner = () => {
             integrity.
           </Text>
           <section className="flex gap-3">
-            <Button>Request Testing</Button>
-            <Button>Contact us</Button>
+            <Button size="small">Request Testing</Button>
+            <Button size="small" usage="primary">
+              Contact us
+            </Button>
           </section>
         </div>
       </section>

@@ -4,22 +4,8 @@ import classnames from "classnames";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  size?:
-    | "medium-md"
-    | "medium-xl"
-    | "medium-lg"
-    | "default-md"
-    | "default-xl"
-    | "default-lg"
-    | "large-md"
-    | "large-xl"
-    | "large-lg"
-    | "small-md"
-    | "small-xl"
-    | "small-lg";
-
+  size?: "default" | "small";
   usage?: "brand" | "click" | "primary" | "default";
-  outline?: "brand" | "primary" | "none";
   className?: string;
 }
 
@@ -27,9 +13,8 @@ export const Button = React.memo(
   ({
     children,
     className,
-    size = "medium-md",
+    size = "default",
     usage = "default",
-    outline = "brand",
     ...other
   }: ButtonProps): JSX.Element => {
     return (
@@ -40,28 +25,12 @@ export const Button = React.memo(
           {
             //--------- Padding && Border Radius ------------//
 
-            //--------24px padding with different border radius---------
-            "p-6 rounded-[10px]": size === "large-md",
-            "p-6 rounded-[24px]": size === "large-lg",
-            "p-6 rounded-[26px]": size === "large-xl",
-            //--------End of 24px padding with different border radius---------
-
-            //--------12px(t,b) 24px(r,l) padding with different border radius---------
-            "py-3 px-6 rounded-[10px]": size === "medium-md",
-            "py-3 px-6 rounded-[24px]": size === "medium-lg",
-            "py-3 px-6 rounded-[26px]": size === "medium-xl",
-            //--------End of 12px(t,b) 24px(r,l) padding with different border radius---------
-
             //--------16px(t,b) 12px(r,l) padding with different border radius---------
-            "py-4 px-3 rounded-[10px]": size === "default-md",
-            "py-4 px-3 rounded-[24px]": size === "default-lg",
-            "py-4 px-3 rounded-[26px]": size === "default-xl",
+            "py-2 px-3": size === "default",
             //--------End of 16px(t,b) 12px(r,l) padding with different border radius---------
 
             //--------8px(t,b) 12px(r,l) padding with different border radius---------
-            "py-2 px-3 rounded-[10px]": size === "small-md",
-            "py-2 px-3 rounded-[24px]": size === "small-lg",
-            "py-2 px-3 rounded-[26px]": size === "small-xl",
+            "py-1 px-6 ": size === "small",
             //--------End of 8px(t,b) 12px(r,l) padding with different border radius---------
 
             //--------- End of Padding && Border Radius------------//
@@ -72,12 +41,6 @@ export const Button = React.memo(
             "bg-milky-green text-white ": usage === "brand",
             "bg-white text-fade-blue ": usage === "click",
             //--------- End of Background Color------------//
-
-            //--------- Border------------//
-            "border border-brand": outline === "brand",
-            "border border-primary-800": outline === "primary",
-            "border-none": outline === "none",
-            //--------- End of Border------------//
           }
         )}
         {...other}
