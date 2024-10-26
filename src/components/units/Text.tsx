@@ -56,6 +56,7 @@ interface propTypes
   usage?: TextUsage;
   text?: string;
   className?: string;
+  secondaryFont?: boolean;
 }
 
 export const Text = React.memo(
@@ -66,6 +67,7 @@ export const Text = React.memo(
     usage = "default",
     className,
     text,
+    secondaryFont = false,
     ...other
   }: propTypes) => {
     return (
@@ -112,6 +114,7 @@ export const Text = React.memo(
 
           //----------End of color------------//
         })}
+        style={{ fontFamily: secondaryFont ? "Arial, sans-serif" : undefined }}
         {...other}
       >
         {text || children}

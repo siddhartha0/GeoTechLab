@@ -7,6 +7,7 @@ export interface ButtonProps
   size?: "default" | "small";
   usage?: "brand" | "click" | "primary" | "default";
   className?: string;
+  secondaryFont?: boolean;
 }
 
 export const Button = React.memo(
@@ -15,6 +16,7 @@ export const Button = React.memo(
     className,
     size = "default",
     usage = "default",
+    secondaryFont = false,
     ...other
   }: ButtonProps): JSX.Element => {
     return (
@@ -43,6 +45,7 @@ export const Button = React.memo(
             //--------- End of Background Color------------//
           }
         )}
+        style={{ fontFamily: secondaryFont ? "Arial, sans-serif" : undefined }}
         {...other}
       >
         {children}

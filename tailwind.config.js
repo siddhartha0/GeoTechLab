@@ -26,7 +26,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Poppins", "Arial", "sans-serif"],
       },
       keyframes: {},
       animation: {},
