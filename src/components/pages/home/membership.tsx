@@ -37,6 +37,16 @@ export const Membership = () => {
         </div>
         <div></div>
       </section>
+      <section className="flex flex-col px-36 py-16">
+        <div className="flex flex-col gap-3 text-center">
+          <Text size="body-md-default" usage="info">
+            OUR
+          </Text>
+          <Text usage="brand" size="heading-lg-default" className="uppercase">
+            Affiliation & Membership
+          </Text>
+        </div>
+      </section>
     </div>
   );
 };
