@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Text } from "../units";
 import logo from "../../assets/images/logo.png";
 import { NavbarData } from "../../utils/constants/NavbarData";
@@ -21,6 +21,8 @@ export const Navbar = memo(() => {
     };
   }, []);
 
+  const nav = useNavigate();
+
   return (
     <div
       className={`flex px-5 py-5 justify-between place-items-center sticky top-0 z-20 ${
@@ -28,9 +30,14 @@ export const Navbar = memo(() => {
       }`}
     >
       <section>
-        <img src={logo} alt="" className="w-52 " />
+        <img
+          src={logo}
+          alt="company logo"
+          className="w-52 cursor-pointer "
+          onClick={() => nav("/")}
+        />
       </section>
-      <section className="flex place-items-center gap-7">
+      <section className="flex place-items-center gap-14">
         {NavbarData.map((header) => (
           <Link to={header.path} key={header.id}>
             <Text
