@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.png";
 import { HeaderData } from "../../utils/constants/HeaderData";
 import { memo, useEffect, useState } from "react";
 
-export const Header = memo(() => {
+export const Navbar = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
