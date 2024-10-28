@@ -2,10 +2,31 @@ import { Link } from "react-router-dom";
 import { Text } from "../units";
 import logo from "../../assets/images/logo.png";
 import { HeaderData } from "../../utils/constants/HeaderData";
+import { memo, useEffect, useState } from "react";
 
-export const Header = () => {
+export const Header = memo(() => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldBeScrolled = window.scrollY > 0;
+      setIsScrolled(shouldBeScrolled);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex place-items-center justify-between px-5 py-5">
+    <div
+      className={`flex px-5 py-5 justify-between place-items-center sticky top-0 z-20 ${
+        isScrolled ? "bg-fadding-blue" : ""
+      }`}
+    >
       <section>
         <img src={logo} alt="" className="w-52 " />
       </section>
@@ -24,4 +45,4 @@ export const Header = () => {
       </section>
     </div>
   );
-};
+});
