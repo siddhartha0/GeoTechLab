@@ -1,4 +1,4 @@
-export const HeaderData = [
+export const NavbarData = [
   { id: 1, title: "home", path: "" },
   { id: 2, title: "our team", path: "" },
   { id: 3, title: "capabilities", path: "" },

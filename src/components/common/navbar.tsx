@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Text } from "../units";
 import logo from "../../assets/images/logo.png";
-import { HeaderData } from "../../utils/constants/HeaderData";
+import { NavbarData } from "../../utils/constants/NavbarData";
 import { memo, useEffect, useState } from "react";
 
 export const Navbar = memo(() => {
@@ -31,7 +31,7 @@ export const Navbar = memo(() => {
         <img src={logo} alt="" className="w-52 " />
       </section>
       <section className="flex place-items-center gap-7">
-        {HeaderData.map((header) => (
+        {NavbarData.map((header) => (
           <Link to={header.path} key={header.id}>
             <Text
               size="body-sm-default"
